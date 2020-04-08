@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        //Q1
+        var arr = [];
+
+        for(var i = 0; i < 6; i++)
+        {
+            arr[i] = Number(prompt("Enter six Numbers:"));//Number converts string to int
+        }
+
+
+        //Q2
+
+        for(var i in arr)
+        {
+            console.log(`cell index is :${i}, contents of cell is :${arr[i]}`)
+        }
+
+        //Q3
+
+        var MaxNum = arr[0];
+        var MinNum = arr[0];
+
+        for(var number of arr)
+        {
+            if(number < MinNum)
+                MinNum = number;
+            else if(number > MaxNum)
+                MaxNum = number;
+        }
+
+        console.log(`smallest number in array is : ${MinNum}`);
+        console.log(`largest number in array is : ${MaxNum}`);
+
+        //Q4
+
+        var sum=0;
+
+        for(var number of arr)
+        sum += number;
+
+        console.log(`sum of numbers in array is ${sum}`);
+
+        //Q5
+
+        var arr2 = [];
+
+        for(var i = 0; i < 6; i++)
+        {
+            arr2[i] = Number(prompt("Enter Six Numbers:"));
+        }
+
+        var OddArr = [];
+        var EvenArr = [];
+        var OddCNT = 0;
+        var EvenCNT = 0;
+
+        for(var i in arr2)
+        {
+            if(arr2[i] % 2 == 0)
+            {
+                EvenArr[EvenCNT] = arr2[i];
+                EvenCNT++;
+            }else{
+                OddArr[OddCNT] = arr2[i];
+                OddCNT++;
+            }
+        }
+
+
+        for(var O of OddArr)
+            console.log(`Odd Numbers: ${O}`);
+        
+        for(var E of EvenArr)
+            console.log(`Even Numbers: ${E}`);
+
+        //Q6
+
+        var Largest,secondLargest;
+
+        if(arr2[0] > arr2[1])
+        {
+            Largest = arr2[0];
+            secondLargest = arr2[1];
+        }else{
+            Largest = arr2[1];
+            secondLargest= arr2[0];
+        }
+
+        for (var i = 2; i < arr2.length; i++)
+        {
+            if(arr2[i] > Largest && arr2[i] < secondLargest)
+            {
+                secondLargest = Largest;
+                Largest = arr2[i];
+            }
+            else if(arr2[i] > secondLargest && arr2[i] < Largest)
+            {
+                secondLargest= arr2[i];
+            }
+        }
+            console.log("second largest number is:" + secondLargest);
+
+        //Q7
+
+        var Matrix = [
+            [true ,true],
+            [false, true],
+            [true, false],
+            [false, false],
+        ]
+
+    </script>
+
+</body>
+</html>
