@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        
+        //Question 1
+    var sec = Number(prompt("enter seconds:"));
+    var counter = Number(prompt("enter counter number:"));
+
+    
+
+    for(var i = 0; i < counter; i++)
+    {
+        setTimeout(
+        function(){ 
+            console.log((Math.floor(Math.random() * 10)));      
+        }
+        ,sec*1000*i
+    );
+    }
+
+    //Question 2
+
+    function Printer(names) {
+
+            var cnt = 0;
+
+            for (var i = 0; i < names.length; i++) {
+                setTimeout(function() {
+                        console.log(names[cnt++])
+                    }, 4000 * i)
+            }
+        }
+
+        Printer(['Trinity', 'Neo', 'Mr.Anderson',`David`,`Smith`]);
+        
+
+
+        //Question 3
+
+        function SQRoot()
+        {
+            var Num = Number(prompt("enter a number:"));
+            return Math.sqrt(Num)
+        }
+
+        alert(`the square root of your number is ${SQRoot()}`);
+        
+
+        //Question 4
+
+        function PWRof()
+        {
+            var Num1 = Number(prompt("enter first number:"));
+            var Num2 = Number(prompt("enter second number:"));
+
+            return Math.pow(Num1,Num2)
+        }
+
+        alert(`the power of your number is ${PWRof()}`);
+        */
+
+
+
+
+    </script>
+    
+</body>
+</html>
